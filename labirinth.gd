@@ -10,6 +10,7 @@ func _on_peer_connected(id: int):
 	var player = preload("res://Player.tscn").instantiate()
 	player.name = str(id)  # Имя узла = ID пира, для authority
 	player.set_multiplayer_authority(id)  # Этот игрок управляет собой
+	print("player: %d connected" % id)
 	$".".add_child(player, true)  # force_readable_name
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
