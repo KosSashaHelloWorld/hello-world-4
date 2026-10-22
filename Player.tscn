@@ -2,12 +2,20 @@
 
 [ext_resource type="Script" uid="uid://ljy8vj30dfd7" path="res://player.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://bkpdokokb6fwu" path="res://icon.svg" id="1_xhfnw"]
+[ext_resource type="PackedScene" uid="uid://byxuni6qj6dqg" path="res://ConnectGUI.tscn" id="2_e80uo"]
 [ext_resource type="PackedScene" uid="uid://by1n77jukhyq8" path="res://Inventory.tscn" id="3_kne1u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lgns8"]
 
 [node name="Player" type="CharacterBody2D" unique_id=1984058840]
 script = ExtResource("1_kpjcp")
+
+[node name="ConnectGui" parent="." unique_id=709556398 instance=ExtResource("2_e80uo")]
+offset_left = 48.0
+offset_top = -65.0
+offset_right = 48.0
+offset_bottom = -65.0
+scale = Vector2(0.23, 0.23)
 
 [node name="Inventory" parent="." unique_id=1059167550 instance=ExtResource("3_kne1u")]
 offset_left = -121.0
