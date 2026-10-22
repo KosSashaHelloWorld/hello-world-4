@@ -2,11 +2,22 @@
 
 [ext_resource type="Script" uid="uid://ljy8vj30dfd7" path="res://player.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://bkpdokokb6fwu" path="res://icon.svg" id="1_xhfnw"]
+[ext_resource type="PackedScene" uid="uid://by1n77jukhyq8" path="res://Inventory.tscn" id="3_kne1u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lgns8"]
 
 [node name="Player" type="CharacterBody2D" unique_id=1984058840]
 script = ExtResource("1_kpjcp")
+
+[node name="Inventory" parent="." unique_id=1059167550 instance=ExtResource("3_kne1u")]
+offset_left = -121.0
+offset_top = -63.000008
+offset_right = -121.0
+offset_bottom = -63.000008
+scale = Vector2(0.315, 0.315)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2072007689]
+zoom = Vector2(4.615, 4.615)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=763363657]
 scale = Vector2(0.135, 0.135)
@@ -14,6 +25,3 @@ texture = ExtResource("1_xhfnw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1187012432]
 shape = SubResource("CircleShape2D_lgns8")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2072007689]
-zoom = Vector2(4.615, 4.615)
