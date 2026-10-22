@@ -1,9 +1,17 @@
 [gd_scene format=3 uid="uid://brsvcwut4cyo4"]
 
+[ext_resource type="PackedScene" uid="uid://c30tylkb6vdnj" path="res://Player.tscn" id="1_t3680"]
+[ext_resource type="PackedScene" uid="uid://chdrmat84560b" path="res://DebugPlarform.tscn" id="2_wt3ke"]
+
 [node name="Node2D" type="Node2D" unique_id=177218335]
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1149421274]
-offset_left = 250.0
-offset_top = 156.0
-offset_right = 290.0
-offset_bottom = 196.0
+[node name="Player" parent="." unique_id=1984058840 instance=ExtResource("1_t3680")]
+
+[node name="DebugPlarform" parent="." unique_id=1508713613 instance=ExtResource("2_wt3ke")]
+position = Vector2(-44, 58)
+
+[node name="DebugPlarform2" parent="." unique_id=494074092 instance=ExtResource("2_wt3ke")]
+position = Vector2(79, 38)
+
+[node name="DebugPlarform3" parent="." unique_id=761756853 instance=ExtResource("2_wt3ke")]
+position = Vector2(-43, -49)
