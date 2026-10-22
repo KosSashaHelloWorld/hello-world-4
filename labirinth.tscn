@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://brsvcwut4cyo4"]
 
+[ext_resource type="Script" uid="uid://dew448oq4lun5" path="res://labirinth.gd" id="1_lxr0d"]
 [ext_resource type="PackedScene" uid="uid://c30tylkb6vdnj" path="res://Player.tscn" id="1_t3680"]
 [ext_resource type="PackedScene" uid="uid://chdrmat84560b" path="res://DebugPlarform.tscn" id="2_wt3ke"]
 
 [node name="Node2D" type="Node2D" unique_id=177218335]
+script = ExtResource("1_lxr0d")
 
 [node name="DebugPlarform" parent="." unique_id=1508713613 instance=ExtResource("2_wt3ke")]
 position = Vector2(-44, 58)
