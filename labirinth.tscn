@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dew448oq4lun5" path="res://labirinth.gd" id="1_lxr0d"]
 [ext_resource type="PackedScene" uid="uid://c30tylkb6vdnj" path="res://Player.tscn" id="1_t3680"]
 [ext_resource type="PackedScene" uid="uid://chdrmat84560b" path="res://DebugPlarform.tscn" id="2_wt3ke"]
+[ext_resource type="PackedScene" uid="uid://byxuni6qj6dqg" path="res://ConnectGUI.tscn" id="4_lcp75"]
 
 [node name="Node2D" type="Node2D" unique_id=177218335]
 script = ExtResource("1_lxr0d")
@@ -18,3 +19,10 @@ position = Vector2(-52, -40)
 rotation = -0.5235988
 
 [node name="Player" parent="." unique_id=1984058840 instance=ExtResource("1_t3680")]
+
+[node name="ConnectGui" parent="." unique_id=709556398 instance=ExtResource("4_lcp75")]
+offset_left = 62.999996
+offset_top = -84.99999
+offset_right = 62.999996
+offset_bottom = -84.99999
+scale = Vector2(0.315, 0.315)
