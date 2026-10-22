@@ -8,7 +8,7 @@ func _ready() -> void:
 @onready var inventory = $ItemList
 
 func _process(delta):
-	if not is_multiplayer_authority():
+	if not get_parent().is_multiplayer_authority():
 		return
 	if Input.is_action_just_pressed("toggle_inventory"):
 		inventory.visible = not inventory.visible

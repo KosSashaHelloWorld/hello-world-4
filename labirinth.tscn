@@ -8,6 +8,9 @@
 [node name="Node2D" type="Node2D" unique_id=177218335]
 script = ExtResource("1_lxr0d")
 
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=1310978465]
+spawn_path = NodePath("../Player")
+
 [node name="DebugPlarform" parent="." unique_id=1508713613 instance=ExtResource("2_wt3ke")]
 position = Vector2(-44, 58)
 

@@ -1,18 +1,15 @@
 extends Node2D
 
+@onready var spawner: MultiplayerSpawner = $MultiplayerSpawner
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if multiplayer.is_server():
-		multiplayer.peer_connected.connect(_on_peer_connected)
+		multiplayer.peer_connected.connect(_spawn_player)
+		# spawn for the host itself
+		_spawn_player(multiplayer.get_unique_id())
 
-func _on_peer_connected(id: int):
-	var player = preload("res://Player.tscn").instantiate()
-	player.name = str(id)  # Имя узла = ID пира, для authority
-	player.set_multiplayer_authority(id)  # Этот игрок управляет собой
-	print("player: %d connected" % id)
-	$".".add_child(player, true)  # force_readable_name
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _spawn_player(id: int) -> void:
+	var player := preload("res://Player.tscn").instantiate()
+	player.name = str(id)
+	player.set_multiplayer_authority(id) 
+	add_child(player, true)
